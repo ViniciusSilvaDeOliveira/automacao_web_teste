@@ -6,7 +6,7 @@ require 'selenium-webdriver'
 require 'site_prism'
 require_relative 'mapa_de_elementos'
 
-World (PageObjects)
+World(PageObjects)
 
 Capybara.configure do |config|
     config.default_driver = :selenium_chrome

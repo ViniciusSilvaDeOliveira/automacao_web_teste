@@ -1,6 +1,6 @@
-Dir[File.join(File.dirname(__FILE__), '..pages_objects/*_page.rb')].each { |file| require file }
+Dir[File.join(File.dirname(__FILE__), '../pages_objects/*_page.rb')].each { |file| require file }
 
-module PageObject
+module PageObjects
     def home
         @home ||= PageObject.new
     end
