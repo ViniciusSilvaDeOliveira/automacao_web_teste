@@ -7,6 +7,5 @@ module PageObject
 
     def products
         @products ||= Prod_Objects.new
-        teste
     end
 end
