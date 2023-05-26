@@ -8,6 +8,7 @@ Funcionalidade: Home - Validar acesso as páginas do site através da url do mkp
     Quero poder acessar as paginas do site por meio da url do mkp
     Para validar a integridade da mesma na home
 
+    #testando os possíveis cenários
     Contexto: 
         * acessar a home do Marketplace
 
