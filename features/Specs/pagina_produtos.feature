@@ -19,6 +19,12 @@ Quero acessar a pagina com produtos a venda
         E adicionar produtos
         Entao validar produtos adicionados e filtro aplicado
 
+    @cenario_produtos_ordem_alfabetica
+    Cenario: Utilizando o filtro da pagina
+        Quando estar na pagina de produtos
+        E selecionar um filtro de z/a
+        Entao valido que os produtos estao em ordem alfabetica
+
     @cenario_de_teste_de_link
     Cenario: Validar link na tela
         Quando houver redirecionamento para a pagina inicial

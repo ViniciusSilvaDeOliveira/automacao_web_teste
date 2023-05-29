@@ -20,6 +20,17 @@ Entao('validar produtos adicionados e filtro aplicado') do
     sleep(10)
 end
 
+Entao('valido que os produtos estao em ordem alfabetica') do
+    binding.pry
+    sleep(5)
+    expect(products.titulos_produtos_ordenados("Test.allTheThings() T-Shirt (Red)"))
+    expect(products.titulos_produtos_ordenados("Sauce Labs Onesie"))
+    expect(products.titulos_produtos_ordenados("Sauce Labs Fleece Jacket"))
+    expect(products.titulos_produtos_ordenados("Sauce Labs Bolt T-Shirt"))
+    expect(products.titulos_produtos_ordenados("Sauce Labs Bike Light"))
+    expect(products.titulos_produtos_ordenados("Sauce Labs Backpack"))
+end
+
 Quando('houver redirecionamento para a pagina inicial') do 
     step 'estar na pagina de produtos' #eu chamo o step estar na pagina de produtos
     products.menu_lateral.click        #chamo a classe produto, chamo o elemento que mapiei e do um click nele
@@ -30,7 +41,7 @@ E('seleciono a opcao About no item hamburguer') do
     click_link('About') #ele vai dar um click no elemento da tela de about e vai direcionar para outra tela
 end
 
-Entao ('valido o direcionamento para o sobre do site') do 
+Entao('valido o direcionamento para o sobre do site') do 
     sleep(5)
     expect(about.img_titulo).to be_truthy()
 end
