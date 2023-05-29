@@ -33,16 +33,16 @@ Entao('validar redirecionamento') do
     expect(page).to have_current_path('https://www.saucedemo.com/inventory.html', url: true)
 end
 
-Quando ('preencho login com um segundo usuario') do 
+Quando('preencho login com um segundo usuario') do 
     home.user.send_keys('fulano')    #passamos para o campo as informações de um usuario e uma senha invalida
     home.password.send_keys('fulano')
 end
 
-E ('apago o user com comando no teclado') do 
+E('apago o user com comando no teclado') do 
     until home.user.value.eql?('') do home.user.send_keys(:backspace) end
     sleep(5) #enquanto o campo user não for vazio 
 end
 
-Entao ('valido campo vazio') do
+Entao('valido campo vazio') do
     expect(home.user.has_no_text?).to eql true
 end

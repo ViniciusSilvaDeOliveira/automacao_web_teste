@@ -10,4 +10,8 @@ module PageObjects
     def products
         @products ||= Prod_Objects.new
     end
+
+    def about 
+        @about ||= PageAbout.new
+    end
 end

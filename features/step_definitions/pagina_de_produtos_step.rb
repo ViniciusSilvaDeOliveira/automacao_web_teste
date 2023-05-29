@@ -21,11 +21,16 @@ Entao('validar produtos adicionados e filtro aplicado') do
 end
 
 Quando('houver redirecionamento para a pagina inicial') do 
-    step 'estar na pagina de produtos'
-    products.menu_lateral.click
+    step 'estar na pagina de produtos' #eu chamo o step estar na pagina de produtos
+    products.menu_lateral.click        #chamo a classe produto, chamo o elemento que mapiei e do um click nele
 end
 
-Entao('valido o link na tela') do 
+E('seleciono a opcao About no item hamburguer') do 
     sleep(5)
-    click_link('About')
+    click_link('About') #ele vai dar um click no elemento da tela de about e vai direcionar para outra tela
+end
+
+Entao ('valido o direcionamento para o sobre do site') do 
+    sleep(5)
+    expect(about.img_titulo).to be_truthy()
 end

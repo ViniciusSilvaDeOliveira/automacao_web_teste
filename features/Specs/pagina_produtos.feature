@@ -22,4 +22,5 @@ Quero acessar a pagina com produtos a venda
     @cenario_de_teste_de_link
     Cenario: Validar link na tela
         Quando houver redirecionamento para a pagina inicial
-        Entao valido o link na tela 
+        E seleciono a opcao About no item hamburguer
+        Entao valido o direcionamento para o sobre do site
