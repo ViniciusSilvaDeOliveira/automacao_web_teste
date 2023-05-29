@@ -44,5 +44,6 @@ E('apago o user com comando no teclado') do
 end
 
 Entao('valido campo vazio') do
-    expect(home.user.has_no_text?).to eql true
+    sleep(5)
+    expect(home.user.has_no_text?).to eql(true)
 end

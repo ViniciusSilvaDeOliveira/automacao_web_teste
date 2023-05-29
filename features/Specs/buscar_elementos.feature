@@ -28,3 +28,13 @@ Funcionalidade: Home - Validar acesso as páginas do site através da url do mkp
         Quando preencho login com um segundo usuario
         E apago o user com comando no teclado
         Entao valido campo vazio
+
+    @cenario_login_sem_usuario
+    Cenario: Realizando o login sem preencher as informacoes
+        Quando tento fazer login sem alguma dado preenchido
+        Entao valido a mensagem de erro
+        Exemplos: 
+            | cenario       |
+            | "semUser"     |
+            | "semPassword" |
+            | "semLogin"    |

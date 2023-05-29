@@ -11,10 +11,12 @@ class Prod_Objects < SitePrism::Page
     element :menu_lateral,     :xpath, '//*[@id="react-burger-menu-btn"]'
     element :titulos_produtos,         '.inventory_item_name'
 
-    def titulos_produtos_ordenados(produto)
-        titulo = []
-        titulo.push(titulos_produtos.text).to eql?(produto)
-        titulos = driver.find_elements(:class, "inventory_item_name")
-        return titulos
+    def titulos_produtos_ordenados(produtos)
+        nome_elementos = []
+        elementos = find_all('.inventory_item_name')
+        elementos.each do |elemento|
+        nome_elementos << elemento.text[11..]
+        end
+        nome_sort = nome_elementos.sort
     end
 end

@@ -5,7 +5,7 @@ end
 
 E('selecionar um filtro de z\/a') do 
     products.filtros.click   #estamos chamando o elemento filtro para fazer uma ação nele
-    select('Name (Z to A)') #o select vai mapear uma lista e selecionar o tipo de filtro
+    select('Name (A to Z)') #o select vai mapear uma lista e selecionar o tipo de filtro
 end
 
 E('adicionar produtos') do 
@@ -15,20 +15,16 @@ end
 
 Entao('validar produtos adicionados e filtro aplicado') do
     sleep(10)
-    expect(products.filtros.value).to eql('za') #pegando o elemento do filtro e vendo se o valor dele é za
+    expect(products.filtros.value).to eql('az') #pegando o elemento do filtro e vendo se o valor dele é za
     expect(products.has_remove_products?)       #validar que tem aquele elemento na nossa tela
     sleep(10)
 end
 
 Entao('valido que os produtos estao em ordem alfabetica') do
-    binding.pry
+    #binding.pry
     sleep(5)
-    expect(products.titulos_produtos_ordenados("Test.allTheThings() T-Shirt (Red)"))
-    expect(products.titulos_produtos_ordenados("Sauce Labs Onesie"))
-    expect(products.titulos_produtos_ordenados("Sauce Labs Fleece Jacket"))
-    expect(products.titulos_produtos_ordenados("Sauce Labs Bolt T-Shirt"))
-    expect(products.titulos_produtos_ordenados("Sauce Labs Bike Light"))
-    expect(products.titulos_produtos_ordenados("Sauce Labs Backpack"))
+    #produtos = ["Things() T-Shirt (Red)", "Onesie", "Fleece Jacket", "Bolt T-Shirt", "Bike Light", "Backpack"]
+    expect(products.titulos_produtos_ordenados).to eql(products.titulos_produtos.text)
 end
 
 Quando('houver redirecionamento para a pagina inicial') do 
