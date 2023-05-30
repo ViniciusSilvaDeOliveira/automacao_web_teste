@@ -13,7 +13,7 @@ E ('preencho alguns campos para seguir com a compra {string}') do |campos|
 end
 
 Entao ('valido que não é possível continuar devido as informacoes nao ter sido preenchidas {string}') do |campos|
-    case cenario
+    case campos
         when "first_name"
             expect(compra.msg_erro).to be_truthy
         when "last_name"

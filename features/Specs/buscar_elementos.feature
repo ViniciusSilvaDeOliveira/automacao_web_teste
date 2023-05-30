@@ -44,8 +44,8 @@ Funcionalidade: Home - Validar acesso as páginas do site através da url do mkp
         E efetuo o login
         E clico na opcao do carrinho
         E clico em checkout
-        E preencho alguns campos para seguir com a compra <cenario>
-        Entao valido que não é possível continuar devido as informacoes nao ter sido preenchidas <cenario>
+        E preencho alguns campos para seguir com a compra <campos>
+        Entao valido que não é possível continuar devido as informacoes nao ter sido preenchidas <campos>
         Exemplos: 
             | campos        |
             | "first_name"  |
