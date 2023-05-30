@@ -31,10 +31,23 @@ Funcionalidade: Home - Validar acesso as páginas do site através da url do mkp
 
     @cenario_login_sem_usuario
     Cenario: Realizando o login sem preencher as informacoes
-        Quando tento fazer login sem alguma dado preenchido
-        Entao valido a mensagem de erro
+        Quando tento fazer login sem algum dado preenchido <cenario>
+        Entao valido a mensagem de erro <cenario>
         Exemplos: 
-            | cenario       |
-            | "semUser"     |
-            | "semPassword" |
-            | "semLogin"    |
+            | cenario        |
+            | "sem_user"     |
+            | "sem_password" |
+
+    @cenario_compra_produtos_informacoes
+    Esquema do Cenario: Realizando uma compra sem as informacoes pessoais
+        Quando efetuo o cadastro
+        E efetuo o login
+        E clico na opcao do carrinho
+        E clico em checkout
+        E preencho alguns campos para seguir com a compra <cenario>
+        Entao valido que não é possível continuar devido as informacoes nao ter sido preenchidas <cenario>
+        Exemplos: 
+            | campos        |
+            | "first_name"  |
+            | "last_name"   |
+            | "postal_code" |

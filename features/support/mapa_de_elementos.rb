@@ -14,4 +14,8 @@ module PageObjects
     def about 
         @about ||= PageAbout.new
     end
+
+    def compra 
+        @compra ||= CompraProdutos.new
+    end
 end

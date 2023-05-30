@@ -47,3 +47,19 @@ Entao('valido campo vazio') do
     sleep(5)
     expect(home.user.has_no_text?).to eql(true)
 end
+
+Quando('tento fazer login sem algum dado preenchido {string}') do |cenario|
+    home.preencher_user_and_password(cenario)
+    home.efetuar_login
+    sleep(5)
+end
+
+Entao ('valido a mensagem de erro {string}') do |cenario|
+    case cenario 
+        when "sem_user"
+            expect(home.msg_user).to be_truthy
+
+        when "sem_password"
+            expect(home.msg_password).to be_truthy
+    end
+end
