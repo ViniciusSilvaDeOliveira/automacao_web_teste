@@ -22,4 +22,13 @@ class CompraProdutos < SitePrism::Page
         click_button('Continue')
         sleep(5)
     end
+
+    def preencher_campos_compra_diferente
+        fill_in 'First Name', with: 'Fulano'
+        fill_in 'Last Name', with: 'Fulano'
+        fill_in 'Zip/Postal Code', with: '09807050'
+        sleep(5)
+        click_button('Continue')
+        sleep(5)
+    end
 end

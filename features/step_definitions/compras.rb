@@ -30,7 +30,7 @@ E ('adiciono um item ao carrinho') do
 end
 
 E ('preencho os campos para seguir com a compra') do
-    compra.preencher_campos_compra
+    compra.preencher_campos_compra_diferente
 end
 
 E ('valido as informações da compra') do 
