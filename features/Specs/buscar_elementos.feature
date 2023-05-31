@@ -51,3 +51,14 @@ Funcionalidade: Home - Validar acesso as páginas do site através da url do mkp
             | "first_name"  |
             | "last_name"   |
             | "postal_code" |
+
+    @Cenario_de_comprar_produto
+    Cenario: Realizando uma compra
+        Quando efetuo o cadastro
+        E efetuo o login
+        E adiciono um item ao carrinho
+        E clico na opcao do carrinho
+        E clico em checkout
+        E preencho os campos para seguir com a compra
+        E valido as informações da compra
+        Entao finalizo a compra e valido que o pedido foi realizado
