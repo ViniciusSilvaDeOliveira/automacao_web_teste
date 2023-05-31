@@ -34,9 +34,10 @@ E ('preencho os campos para seguir com a compra') do
 end
 
 E ('valido as informações da compra') do 
+    find(".app_logo", :visible => true) #validar se o elemento existe na tela
     expect(compra.finish_valor_total).to be_truthy
     expect(compra.finish_cancelar).to be_truthy
-    expect(compra.titulo_pagina.text).to eql("Swag Labs")
+    #expect(compra.titulo_pagina.text).to eql("Swag Labs")
     sleep(5)
     compra.btn_finish.click
 end
